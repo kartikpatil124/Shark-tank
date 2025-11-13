@@ -1,9 +1,23 @@
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
+const express = require("express");
+const jsonServer = require("json-server");
+const path = require("path");
 
-app.get('/', (req, res) => {
-  res.send('Hello from Shark-tank backend!');
+const app = express();
+const PORT = process.env.PORT || 10000;
+
+// Enable JSON server router
+const router = jsonServer.router(path.join(__dirname, "db.json"));
+const middlewares = jsonServer.defaults();
+
+app.use(express.json());
+app.use(middlewares);
+
+// API routes
+app.use("/pitches", router);
+
+// Home route
+app.get("/", (req, res) => {
+  res.send("Shark Tank backend is running!");
 });
 
 app.listen(PORT, () => {

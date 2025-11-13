@@ -36,7 +36,7 @@ let searchByInput = document.getElementById("search-by-input");
 let searchByButton = document.getElementById("search-by-button");
 
 // ================== VARIABLES ==================
-let BASE_URL = "http://localhost:3000/pitches";
+let BASE_URL = "https://shark-tank-vh6s.onrender.com/pitches";
 let productData = [];
 
 // ================== FETCH DATA ==================
