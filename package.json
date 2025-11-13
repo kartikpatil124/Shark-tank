@@ -1,0 +1,13 @@
+{
+  "name": "sharktankproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "json-server --watch db.json --port 3000"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "json-server": "^0.17.4"
+  }
+}
