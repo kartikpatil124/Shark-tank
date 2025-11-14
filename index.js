@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(middlewares);
 
 // API routes
-app.use("/pitches", router);
+app.use("/", router); 
 
 // Home route
 app.get("/", (req, res) => {
